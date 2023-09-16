@@ -28,3 +28,7 @@ npm run dev -- --open
 Solid apps are built with _adapters_, which optimise your project for deployment to different environments.
 
 By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different adapter, add it to the `devDependencies` in `package.json` and specify in your `vite.config.js`.
+
+## Deploy a Solid Site to Cloudflare
+- [SolidStart Cloudflare configuration](https://developers.cloudflare.com/pages/framework-guides/deploy-a-solid-site/#solidstart-cloudflare-configuration)
+- [Deploy via the Cloudflare dashboard](https://developers.cloudflare.com/pages/framework-guides/deploy-a-solid-site/#deploy-via-the-cloudflare-dashboard)
