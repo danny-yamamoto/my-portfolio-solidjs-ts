@@ -1,40 +1,122 @@
 body {
-  font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#intro {
+  background-color: #333;
+  color: #fff;
+}
+
+#articles {
+  background-color: #ddd;
+}
+
+h1, h2 {
+  color: #fff;
+  margin: 0 0 20px;
+  border-bottom: 2px solid #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 0px;
 }
 
 a {
-  margin-right: 1rem;
+  color: #0077cc;
+  text-decoration: none;
 }
 
-main {
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
   text-align: center;
-  padding: 1em;
-  margin: 0 auto;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-h1 {
-  color: #335d92;
-  text-transform: uppercase;
-  font-size: 4rem;
-  font-weight: 100;
-  line-height: 1.1;
-  margin: 4rem auto;
-  max-width: 14rem;
+.social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  text-decoration: none;
 }
 
-p {
-  max-width: 14rem;
-  margin: 2rem auto;
-  line-height: 1.35;
+.social-links a:hover {
+  color: #0077cc;
 }
 
-@media (min-width: 480px) {
-  h1 {
-    max-width: none;
+.repo-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);  /* 小さな画面のデフォルトは1列 */
+  gap: 15px;
+}
+
+.repo-tile {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.repo-tile:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.repo-name {
+  font-size: 1.0em;
+  margin-top: 0;
+  line-height: 1;
+}
+
+.repo-description {
+  color: #555;
+  margin: 1px 0;
+  line-height: 1;
+  font-size: 0.8em;
+}
+
+.repo-link {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.repo-link:hover {
+  text-decoration: underline;
+}
+
+/* 中間の画面サイズでのスタイル */
+@media (min-width: 600px) {
+  .repo-container {
+      grid-template-columns: repeat(2, 1fr);  /* 2列 */
   }
+}
 
-  p {
-    max-width: none;
+/* 大きな画面サイズでのスタイル */
+@media (min-width: 900px) {
+  .repo-container {
+      grid-template-columns: repeat(3, 1fr);  /* 3列 */
   }
 }
