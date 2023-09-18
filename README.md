@@ -32,3 +32,7 @@ By default, `npm run build` will generate a Node app that you can run with `npm 
 ## Deploy a Solid Site to Cloudflare
 - [SolidStart Cloudflare configuration](https://developers.cloudflare.com/pages/framework-guides/deploy-a-solid-site/#solidstart-cloudflare-configuration)
 - [Deploy via the Cloudflare dashboard](https://developers.cloudflare.com/pages/framework-guides/deploy-a-solid-site/#deploy-via-the-cloudflare-dashboard)
+
+## SolidStart
+- [Docs](https://start.solidjs.com/getting-started/what-is-solidstart)
+- [GitHub](https://github.com/solidjs/solid-start)
