@@ -12,3 +12,9 @@ export interface IArticles {
     title: string;
     detail?: any[] | undefined;
 }
+
+export interface IFooter {
+    titile: string;
+    github: string;
+    twitter: string;
+}
