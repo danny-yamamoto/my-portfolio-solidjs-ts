@@ -1,5 +1,5 @@
 import { Component } from "solid-js";
-import { IExperience } from "../../types";
+import { IExperience } from "../types";
 
 const Experience: Component<{ experience: IExperience }> = props => {
     return (
