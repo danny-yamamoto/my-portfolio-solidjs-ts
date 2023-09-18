@@ -22,6 +22,5 @@ export async function getExperience() {
           position: 'Software Engineer',
       }
     ]
-    console.log("kokoda")
     return experience;
 }
