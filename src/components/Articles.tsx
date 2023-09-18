@@ -1,6 +1,5 @@
 import { Component } from "solid-js";
 import { IArticles } from "../types";
-import { Link } from "solid-start";
 
 const Articles: Component<{ articles: IArticles }> = props => {
     return (
