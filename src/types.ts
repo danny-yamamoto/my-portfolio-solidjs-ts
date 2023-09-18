@@ -13,8 +13,13 @@ export interface IArticles {
     detail?: any[] | undefined;
 }
 
+export interface IRepositories {
+    title: string;
+    detail?: any[] | undefined;
+}
+
 export interface IFooter {
-    titile: string;
+    title: string;
     github: string;
     twitter: string;
 }
