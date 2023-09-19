@@ -3,7 +3,7 @@ import { IArticles, IRepositories } from "../types";
 
 const Repositories: Component<{ repositories: IRepositories }> = props => {
     return (
-        <section id="articles">
+        <section>
             <h1>{props.repositories.title}</h1>
             <div class="repo-container">
                 {props.repositories.detail && props.repositories.detail.map(({ name, description, url }) => (
