@@ -3,17 +3,21 @@ import { createServerData$ } from "solid-start/server";
 import { getExperience } from "../utils/experience.server"
 import Introduction from "../components/Introduction";
 import Experience from "../components/Experience";
-import { IArticles, IExperience, IFooter, IIntroduction, IRepositories } from "../types"
+import { IArticles, ICertificates, IExperience, IFooter, IIntroduction, IRepositories } from "../types"
 import Articles from "~/components/Articles";
 import { getArticles } from "../utils/articles.server";
 import Footer from "~/components/Footer";
 import { getRepositories } from "~/utils/repositories.server";
 import Repositories from "~/components/Repositories";
+import { getCertificates } from "~/utils/certificates.server";
+import { Certificate } from "crypto";
+import Certificates from "~/components/Certificates";
 
 type CombinedJson = {
   displayExperience: any[];
   displayArticles: any[];
   displayRepositories: any[];
+  displayCertificates: any[];
 }
 
 export function routeData() {
@@ -24,11 +28,13 @@ export function routeData() {
     const experience: any[] = await getExperience();
     const articles = await getArticles(20);
     const repositories = await getRepositories(ghEndpoint, ghToken);
+    const certificates: any[] = await getCertificates();
 
     const combinedJson:CombinedJson = {
       displayExperience: experience,
       displayArticles: articles,
       displayRepositories: repositories,
+      displayCertificates: certificates,
     }
 
     return combinedJson;
@@ -53,6 +59,10 @@ export default function Home() {
     title: "Repositories",
     detail: data()?.displayRepositories,
   }
+  const iCertificates: ICertificates = {
+    title: "Certificates",
+    detail: data()?.displayCertificates,
+  }
   const iFooter:IFooter = {
     title: "Daisuke Yamamoto",
     github: "https://github.com/danny-yamamoto",
@@ -64,6 +74,7 @@ export default function Home() {
       <Experience experience={iExperience}/>
       <Articles articles={iArticles}/>
       <Repositories repositories={iRepositories} />
+      <Certificates certificates={iCertificates} />
       <Footer footer={iFooter} />
     </div>
   );

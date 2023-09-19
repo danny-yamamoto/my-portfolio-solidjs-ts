@@ -18,6 +18,11 @@ export interface IRepositories {
     detail?: any[] | undefined;
 }
 
+export interface ICertificates {
+    title: string;
+    detail?: any[] | undefined;
+}
+
 export interface IFooter {
     title: string;
     github: string;
