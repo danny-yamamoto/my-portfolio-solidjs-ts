@@ -9,7 +9,7 @@ flowchart LR
     client["`Clinet`"]
     server0["`Server`"]
     server1["`Qiita`"]
-    server2["`GitHUb`"]
+    server2["`GitHub`"]
     client --> server0
     server0 -->|REST| server1
     server0 -->|GraphQL| server2
