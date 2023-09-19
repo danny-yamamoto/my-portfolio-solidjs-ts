@@ -18,7 +18,6 @@ type CombinedJson = {
 
 export function routeData() {
   return createServerData$(async (_, { request }) => {
-    console.log(import.meta.env)
     const vars: any = import.meta.env;
     const ghEndpoint: string = vars.VITE_GRAPHQL_API;
     const ghToken: string = vars.VITE_GH_TOKEN;
