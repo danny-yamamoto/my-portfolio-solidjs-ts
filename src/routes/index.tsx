@@ -18,9 +18,10 @@ type CombinedJson = {
 
 export function routeData() {
   return createServerData$(async (_, { request }) => {
-    const vars: any = process.env;
-    const ghEndpoint: string = vars.GRAPHQL_API;
-    const ghToken: string = vars.GH_TOKEN;
+    console.log(import.meta.env)
+    const vars: any = import.meta.env;
+    const ghEndpoint: string = vars.VITE_GRAPHQL_API;
+    const ghToken: string = vars.VITE_GH_TOKEN;
     const experience: any[] = await getExperience();
     const articles = await getArticles(20);
     const repositories = await getRepositories(ghEndpoint, ghToken);
