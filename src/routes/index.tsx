@@ -10,7 +10,6 @@ import Footer from "~/components/Footer";
 import { getRepositories } from "~/utils/repositories.server";
 import Repositories from "~/components/Repositories";
 import { getCertificates } from "~/utils/certificates.server";
-import { Certificate } from "crypto";
 import Certificates from "~/components/Certificates";
 
 type CombinedJson = {
