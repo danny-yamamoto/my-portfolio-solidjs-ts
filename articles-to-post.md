@@ -118,7 +118,7 @@ node ➜ /workspaces/my-portfolio-solidjs-ts (main) $ npm run dev
 ├── package.json
 ├── package-lock.json
 ├── public
-│   └── favicon.ico
+│   └── favicon.ico                    # edit
 ├── README.md
 ├── src
 │   ├── components                     # add
@@ -130,13 +130,13 @@ node ➜ /workspaces/my-portfolio-solidjs-ts (main) $ npm run dev
 │   ├── entry-client.tsx
 │   ├── entry-server.tsx
 │   ├── global.d.ts
-│   ├── root.css
+│   ├── root.css                       # edit
 │   ├── root.tsx
 │   ├── routes
 │   │   ├── [...404].tsx
 │   │   └── index.tsx                  # edit
-│   ├── types.ts
-│   └── utils
+│   ├── types.ts                       # add
+│   └── utils                          # add
 │       ├── articles.server.tsx        # add
 │       ├── experience.server.tsx      # add
 │       └── repositories.server.tsx    # add
@@ -179,7 +179,7 @@ https://github.com/danny-yamamoto/my-portfolio-remix-ts/blob/1262e4634c4a2e40806
 
 ## Deploy a SolidJS site
 - この環境では、Adapter を install したまま起動することができません。原因を確認中です。
-- 公式の [Docs](https://developers.cloudflare.com/pages/framework-guides/deploy-a-solid-site/#use-bindings-in-your-solid-application)の通り、`vite.config.ts` ファイルで Adapter の使用方法を更新します。
+- 公式の [Docs](https://developers.cloudflare.com/pages/framework-guides/deploy-a-solid-site/#use-bindings-in-your-solid-application)の通り、`vite.config.ts` ファイルに Adapter を追加します。
 
 ## Summary
 - SolidJS について書きました。
